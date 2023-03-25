@@ -3,6 +3,7 @@ const express = require('express');
 
 
 const app = express()
+//calling api using fetch
 
 app.get('/', (req, response)=>{
     const url = 'http://5c055de56b84ee00137d25a0.mockapi.io/api/v1/employees';
@@ -14,6 +15,8 @@ app.get('/', (req, response)=>{
         console.log(err)
     })
 })
+
+//filtering api data on the bases of id we are giving in url
 app.get('/employee/:id', (req, response)=>{
     const employee=[]
     const url = 'http://5c055de56b84ee00137d25a0.mockapi.io/api/v1/employees';
